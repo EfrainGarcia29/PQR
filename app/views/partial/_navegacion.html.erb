@@ -1,0 +1,11 @@
+<nav class="navbar navbar-danger bg-danger" style="color: #FFFFFF;font-weight: bold;">
+    <a class="navbar-brand">Sistema PQR</a>
+    <%= link_to "Inicio", new_user_session_path %>
+    <%= link_to "Registro", new_user_registration_path %>
+    <%= link_to "Menu", root_path %>
+    <%= link_to "Acerca", root_path %>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+      <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  </nav>
