@@ -1,13 +1,15 @@
+<div class="text-center">
 <p id="notice"><%= notice %></p>
 
 <h1>Rols</h1>
 
-<table>
+ <table class="table text-center table-bordered ">
+
   <thead>
     <tr>
       <th>Nombre</th>
       <th>User</th>
-      <th colspan="3"></th>
+      <th>Acciones</th>
     </tr>
   </thead>
 
@@ -16,9 +18,9 @@
       <tr>
         <td><%= rol.nombre %></td>
         <td><%= rol.users %></td>
-        <td><%= link_to 'Show', rol %></td>
-        <td><%= link_to 'Edit', edit_rol_path(rol) %></td>
-        <td><%= link_to 'Destroy', rol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button class="btn btn-info"><%= link_to 'Show', rol %></button>
+        <button class="btn btn-success"><%= link_to 'Edit', edit_rol_path(request) %></button>
+        <button class="btn btn-danger"><%= link_to 'Destroy', rol, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,3 +29,4 @@
 <br>
 
 <%= link_to 'New Rol', new_rol_path %>
+</div>

@@ -1,15 +1,17 @@
+<div class="text-center">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Adjuncts</h1>
 
-<table>
+<table class="table text-center table-bordered ">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>File</th>
       <th>Request</th>
-      <th colspan="3"></th>
+      <th>Acciones</th>
     </tr>
   </thead>
 
@@ -20,9 +22,9 @@
         <td><%= adjunct.descripcion %></td>
         <td><%= adjunct.file %></td>
         <td><%= adjunct.request %></td>
-        <td><%= link_to 'Show', adjunct %></td>
-        <td><%= link_to 'Edit', edit_adjunct_path(adjunct) %></td>
-        <td><%= link_to 'Destroy', adjunct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button class="btn btn-info"><%= link_to 'Show', adjunct %></button>
+        <button class="btn btn-success"><%= link_to 'Edit', edit_adjunct_path(request) %></button>
+        <button class="btn btn-danger"><%= link_to 'Destroy', adjunct, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,3 +33,4 @@
 <br>
 
 <%= link_to 'New Adjunct', new_adjunct_path %>
+</div>

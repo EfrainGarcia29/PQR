@@ -2,9 +2,25 @@
 <html>
 
 	<head>
-		<title></title>
+	<title></title>
+	
 	</head>
 	<body>
-		<div class="text-right"><button class="btn btn-info my-2 my-sm-0" type="submit"><%= link_to "PQR","requests/index",method: :post %></button></div>
+	<div class="contenedor">
+    <ul>
+  <li><a class="navbar-brand">Usuario</a></li>
+  <li><%= link_to "Notificaciones","../usuarios/index",method: :post %></li>
+  <li><%= link_to "PQR","requests/index",method: :post %></li>
+  <li><%= link_to "","../rols/index",method: :post %></li>
+  <li><%= link_to "","../adjuncts/index",method: :post %></li>
+  <li><%= link_to "","../parameters/index",method: :post %></li>
+	</ul>
+    
+  </div>
+		
 	</body>
+	
 </html>
+
+		
+  

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'admin/index'
   resources :rols
+  post 'rols/index'
   resources :adjuncts
+  post 'adjuncts/index'
   devise_for :users
   #, skip: [:sessions]
 #	as :user do
@@ -9,8 +12,11 @@ Rails.application.routes.draw do
 #	  delete 'signout', to: 'devise/sessions#destroy', as: :destroy_user_session
 	#end
   resources :parameters
+  post 'parameters/index'
   resources :type_requests
+  post 'type_requests/index'
   resources :usuarios
+  post 'usuarios/index'
   resources :requests
   post 'requests/index'
   resources :inicio

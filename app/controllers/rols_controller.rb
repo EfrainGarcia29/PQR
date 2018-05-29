@@ -24,7 +24,7 @@ class RolsController < ApplicationController
   # POST /rols
   # POST /rols.json
   def create
-    @rol = Rol.new(rol_params)
+    @rol = rols.new(rol_params)
 
     if user_signed_in?
       respond_to do |format|
