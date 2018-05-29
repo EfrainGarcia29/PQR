@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @request.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @request.fecha %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @request.hora %>
+</p>
+
+<p>
+  <strong>Reasignado:</strong>
+  <%= @request.reasignado %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
