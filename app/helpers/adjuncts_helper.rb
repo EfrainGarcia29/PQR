@@ -1,0 +1,2 @@
+module AdjunctsHelper
+end

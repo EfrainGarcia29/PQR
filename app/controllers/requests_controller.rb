@@ -4,12 +4,13 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.all
+    @requests = current_user.requests.all
   end
 
   # GET /requests/1
   # GET /requests/1.json
   def show
+
   end
 
   # GET /requests/new
@@ -24,15 +25,21 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    @request = current_user.requests.new(request_params)
+    
 
     respond_to do |format|
-      if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
-        format.json { render :show, status: :created, location: @request }
+      if user_signed_in?
+     @request = current_user.requests.new(request_params)
+
+        if @request.save
+          format.html { redirect_to @request, notice: 'Request was successfully created.' }
+          format.json { render :show, status: :created, location: @request }
+        else
+          format.html { render :new }
+          format.json { render json: @request.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @request.errors, status: :unprocessable_entity }
+        render:new  
       end
     end
   end

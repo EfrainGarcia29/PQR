@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @adjunct.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @adjunct.descripcion %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= @adjunct.file %>
+</p>
+
+<p>
+  <strong>Request:</strong>
+  <%= @adjunct.request %>
+</p>
+
+<%= link_to 'Edit', edit_adjunct_path(@adjunct) %> |
+<%= link_to 'Back', adjuncts_path %>
