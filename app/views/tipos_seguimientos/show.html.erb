@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tipos_seguimiento.nombre %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @tipos_seguimiento.comentario %>
+</p>
+
+<%= link_to 'Edit', edit_tipos_seguimiento_path(@tipos_seguimiento) %> |
+<%= link_to 'Back', tipos_seguimientos_path %>

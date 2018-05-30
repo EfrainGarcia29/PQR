@@ -25,22 +25,25 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    
+   # @request = current_user.requests.new(request_params)
 
     respond_to do |format|
-      if user_signed_in?
-     @request = current_user.requests.new(request_params)
 
-        if @request.save
-          format.html { redirect_to @request, notice: 'Request was successfully created.' }
-          format.json { render :show, status: :created, location: @request }
-        else
-          format.html { render :new }
-          format.json { render json: @request.errors, status: :unprocessable_entity }
-        end
+      if user_signed_in?
+      @request = current_user.requests.new(request_params)
+
+          if @request.save
+            format.html { redirect_to @request, notice: 'Request was successfully created.' }
+            format.json { render :show, status: :created, location: @request }
+          else
+            format.html { render :new }
+            format.json { render json: @request.errors, status: :unprocessable_entity }
+          end
+        
       else
         render:new  
       end
+
     end
   end
 

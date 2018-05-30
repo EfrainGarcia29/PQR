@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @seguimiento.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @seguimiento.fecha %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @seguimiento.hora %>
+</p>
+
+<%= link_to 'Edit', edit_seguimiento_path(@seguimiento) %> |
+<%= link_to 'Back', seguimientos_path %>

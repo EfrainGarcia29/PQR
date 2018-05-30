@@ -13,7 +13,8 @@
   <%= render  "partial/navegacion" %>
   <%= render  "partial/log" %>
   <%= yield %>
-  <%= render  "partial/alerta" %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </body>
   <%= render  "partial/final" %>
 </html>

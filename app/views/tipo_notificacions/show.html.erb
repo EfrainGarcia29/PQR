@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @tipo_notificacion.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tipo_notificacion.descripcion %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @tipo_notificacion.comentario %>
+</p>
+
+<p>
+  <strong>Notificacion:</strong>
+  <%= @tipo_notificacion.notificacion %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_notificacion_path(@tipo_notificacion) %> |
+<%= link_to 'Back', tipo_notificacions_path %>

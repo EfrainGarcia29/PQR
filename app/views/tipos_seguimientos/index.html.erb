@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipos Seguimientos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipos_seguimientos.each do |tipos_seguimiento| %>
+      <tr>
+        <td><%= tipos_seguimiento.nombre %></td>
+        <td><%= tipos_seguimiento.comentario %></td>
+        <td><%= link_to 'Show', tipos_seguimiento %></td>
+        <td><%= link_to 'Edit', edit_tipos_seguimiento_path(tipos_seguimiento) %></td>
+        <td><%= link_to 'Destroy', tipos_seguimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipos Seguimiento', new_tipos_seguimiento_path %>

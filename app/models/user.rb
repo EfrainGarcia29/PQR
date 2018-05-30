@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :requests
-  belongs_to :rol
+  has_many :usuarios_has_notificacion
 end
